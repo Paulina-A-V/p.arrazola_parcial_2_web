@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -14,6 +15,8 @@ export class MedicoService {
         @InjectRepository(MedicoEntity)
         private readonly medicoRepository: Repository<MedicoEntity>,
     ) { }
+
+
 
     async findAll(): Promise<MedicoEntity[]> {
         return await this.medicoRepository.find(
